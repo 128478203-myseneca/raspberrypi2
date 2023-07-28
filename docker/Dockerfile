@@ -266,25 +266,25 @@ RUN chmod -R +x Hpde
 RUN echo "Replace VIPER.ENV"
 RUN git clone --depth 1 https://github.com/128478203-myseneca/raspberrypi2.git
 
-RUN chmod -R +x raspberrypi
+RUN chmod -R +x raspberrypi2
 
-RUN cp -rf raspberrypi/viper-env-file/viper.env Viper-produce/viper.env
-RUN cp -rf raspberrypi/viper-env-file/viper.env Viper-preprocess/viper.env
-RUN cp -rf raspberrypi/viper-env-file/viper.env Viper-preprocess2/viper.env
+RUN cp -rf raspberrypi2/viper-env-file/viper.env Viper-produce/viper.env
+RUN cp -rf raspberrypi2/viper-env-file/viper.env Viper-preprocess/viper.env
+RUN cp -rf raspberrypi2/viper-env-file/viper.env Viper-preprocess2/viper.env
 
-RUN cp -rf raspberrypi/viper-env-file/viper.env Viperviz/viper.env
+RUN cp -rf raspberrypi2/viper-env-file/viper.env Viperviz/viper.env
 
 RUN echo "Copy the IotSolution Scripts"
 
 #RUN mkdir IotSolution
-RUN cp -rf raspberrypi/iotsolution-scripts-data/* IotSolution/
+RUN cp -rf raspberrypi2/iotsolution-scripts-data/* IotSolution/
 
 RUN echo "PIP Install TML core packages"
 RUN pip install maadstml
 
-RUN cp -rf raspberrypi/tmux-shell-script/tmux-docker.sh tmux/tmux-docker.sh
+RUN cp -rf raspberrypi2/tmux-shell-script/tmux-docker.sh tmux/tmux-docker.sh
 
-RUN cp -rf raspberrypi/iot-dashboard-html/viperviz.zip Viperviz/viperviz.zip
+RUN cp -rf raspberrypi2/iot-dashboard-html/viperviz.zip Viperviz/viperviz.zip
 RUN chmod -R +x IotSolution
 RUN chmod -R +x Viperviz
 RUN chmod -R +x tmux
@@ -294,6 +294,6 @@ RUN unzip viperviz.zip
 
 WORKDIR /
 
-RUN rm -rf raspberrypi
+RUN rm -rf raspberrypi2
 
 ENTRYPOINT ["/bin/bash","-c","while true; do sleep 1; done | ./tmux/tmux-docker.sh"]
