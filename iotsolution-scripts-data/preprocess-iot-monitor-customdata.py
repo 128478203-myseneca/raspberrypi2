@@ -176,11 +176,13 @@ def sendtransactiondata(maintopic,mainproducerid,VIPERPORT,index,preprocesstopic
 #	  // check for payload  'uid=subject.reference,filter:resourceType=MedicationAdministration,payload=payload.payload~\
 
 
-     jsoncriteria = 'uid=id~\
-subtopics=Datetime1,DAYTON_MW~\
-values=id,Datetime1,DAYTON_MW,Datetime~\
+     jsoncriteria='uid=id,filter:allrecords~\
+subtopics=Datetime1~\
+values=DAYTON_MW~\
 identifiers=id~\
-datetime=Datetime~
+datetime=Datetime~\
+msgid=id~\
+latlong='
 
 
 
@@ -215,7 +217,9 @@ datetime=Datetime~
 
      
 #     pathtotmlattrs='oem=id,lat=subject.reference,long=component.0.code.coding.0.display,location=component.1.valueQuantity.value'     
-     pathtotmlattrs='oem=n/a,lat=n/a,long=n/a,location=n/a,identifier=n/a'     
+     pathtotmlattrs='oem=n/a,lat=n/a,long=n/a,location=n/a,identifier=n/a'
+     pathtotmlattrs='oem=n/a,lat=n/a,long=n/a,location=n/a,identifier=id'
+ 
      
      try:
         result=maadstml.viperpreprocesscustomjson(VIPERTOKEN,VIPERHOST,VIPERPORT,topic,producerid,offset,jsoncriteria,rawdataoutput,maxrows,enabletls,delay,brokerhost,
