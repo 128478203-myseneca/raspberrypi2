@@ -161,8 +161,8 @@ def sendtransactiondata(maintopic,mainproducerid,VIPERPORT,index,preprocesstopic
 
 #############################################################################################################
 #                                     SEND DATA TO DATA STREAMS IN PARALLEL USING SSL/TLS FOR WALMART EXAMPLE
-maintopic='iot-preprocess'
-preprocesstopic='iot-preprocess2'
+maintopic='iot-preprocess-feher'
+preprocesstopic='iot-preprocess2-feher'
 
 maintopic,producerid=datasetup(maintopic,preprocesstopic)
 print(maintopic,producerid)

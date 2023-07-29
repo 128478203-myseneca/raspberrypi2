@@ -182,11 +182,8 @@ values=DAYTON_MW~\
 identifiers=id~\
 datetime=Datetime~\
 msgid=id~\
-latlong=lat:long'   
-
-
-
-
+latlong=lat:long'    
+  
 
 #     jsoncriteria='uid=entry.0.resource.id,filter:allrecords~\
 #subtopics=entry.1.resource.type.0.coding.0.code~\
@@ -235,8 +232,8 @@ latlong=lat:long'
 #############################################################################################################
 #                                     SETUP THE TOPIC DATA STREAMS FOR WALMART EXAMPLE
 
-maintopic='iot-mainstream'
-preprocesstopic='iot-preprocess'
+maintopic='iot-preprocess-feher'
+preprocesstopic='iot-preprocess2-feher'
 
 maintopic,producerid=datasetup(maintopic,preprocesstopic)
 print(maintopic,producerid)
