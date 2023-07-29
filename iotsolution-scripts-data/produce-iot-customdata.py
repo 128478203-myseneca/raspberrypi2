@@ -175,7 +175,7 @@ def producetokafka(value, tmlid, identifier,producerid,maintopic,substream):
 
 inputfile=basedir + '/IotSolution/IoTData.txt'
 
-maintopic='iot-mainstream-feher'
+maintopic='iot-mainstream'
 
 # Setup Kafka topic
 producerid=''

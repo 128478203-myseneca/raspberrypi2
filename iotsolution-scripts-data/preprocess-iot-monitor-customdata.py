@@ -232,7 +232,7 @@ latlong=lat:long'
 #############################################################################################################
 #                                     SETUP THE TOPIC DATA STREAMS FOR WALMART EXAMPLE
 
-maintopic='iot-mainstream-feher'
+maintopic='iot-mainstream'
 preprocesstopic='iot-preprocess'
 
 maintopic,producerid=datasetup(maintopic,preprocesstopic)
