@@ -232,8 +232,8 @@ latlong=lat:long'
 #############################################################################################################
 #                                     SETUP THE TOPIC DATA STREAMS FOR WALMART EXAMPLE
 
-maintopic='iot-preprocess-feher'
-preprocesstopic='iot-preprocess2-feher'
+maintopic='iot-mainstream'
+preprocesstopic='iot-preprocess'
 
 maintopic,producerid=datasetup(maintopic,preprocesstopic)
 print(maintopic,producerid)
